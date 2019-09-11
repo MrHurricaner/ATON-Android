@@ -494,6 +494,7 @@
     <string name="restricted_amount">锁仓数量</string>
     <string name="double_signing">多签</string>
     <string name="nav_delegate">委托</string>
+    <string name="nav_restrictingplan">锁仓</string>
     <string name="total_delegate_title">总计委托</string>
     <string name="total_delegate">%1$s&#160;LAT</string>
     <string name="delegate_record">委托记录</string>

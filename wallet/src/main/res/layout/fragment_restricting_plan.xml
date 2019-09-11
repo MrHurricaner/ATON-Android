@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/Text.000.36"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="30dp"
+        android:text="创建锁仓计划" />
+
+    <LinearLayout
+        android:id="@+id/layout_benifit_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_benifit_address"
+            style="@style/Text.000.14"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_edittext_underline"
+            android:digits="0123456789abcdefxABCDEFX"
+            android:ellipsize="end"
+            android:gravity="center_vertical|left"
+            android:hint="输入锁仓释放到账账户地址"
+            android:singleLine="true"
+            android:textColorHint="@color/color_b6bbd0" />
+
+        <ImageView
+            android:id="@+id/iv_address_scan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:src="@drawable/icon_scan_s" />
+    </LinearLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintTop_toBottomOf="@id/layout_benifit_address"
+        app:layout_constraintBottom_toTopOf="@+id/sbtn_create"
+        android:layout_marginTop="36dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/list_restricting_plan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tv_add_restricting_plan"
+                style="@style/Text.000.14"
+                android:layout_marginTop="12dp"
+                app:layout_constraintTop_toBottomOf="@id/list_restricting_plan"
+                app:layout_constraintLeft_toLeftOf="@id/list_restricting_plan"
+                android:drawableLeft="@drawable/icon_node_add"
+                android:text="添加"
+                android:drawablePadding="4dp" />
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+
+
+    <com.juzix.wallet.component.widget.ShadowButton
+        android:id="@+id/sbtn_create"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="12dp"
+        app:text="创建锁仓计划"
+        android:layout_gravity="bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="18dp"
+        app:textAppearance="@style/MainButtonStyle"
+        app:textBackground="@drawable/bg_main_button" />
+
+
+
+</android.support.constraint.ConstraintLayout>

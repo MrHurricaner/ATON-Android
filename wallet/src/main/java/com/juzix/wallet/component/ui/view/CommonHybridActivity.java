@@ -82,7 +82,10 @@ public class CommonHybridActivity extends BaseAgentWebActivity {
 
     private void init() {
 
-        mUrl = getIntent().getStringExtra(Constants.Extra.EXTRA_URL);
+        String url = getIntent().getStringExtra(Constants.Extra.EXTRA_URL);
+
+        mUrl = url.startsWith("(http(s?)://)") ? url : "htts://".concat(url);
+
         mWebType = getIntent().getIntExtra(Constants.Extra.EXTRA_WEB_TYPE, WebType.WEB_TYPE_COMMON);
 
         ctb = findViewById(R.id.ctb);

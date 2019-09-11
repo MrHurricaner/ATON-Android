@@ -487,6 +487,7 @@
     <string name="double_signing">Double Signing</string>
 
     <string name="nav_delegate">Delegate</string>
+    <string name="nav_restrictingplan">RestrictingPlan</string>
     <string name="total_delegate_title">Total Delegated</string>
     <string name="total_delegate">%1$s&#160;LAT</string>
     <string name="delegate_record">Record</string>

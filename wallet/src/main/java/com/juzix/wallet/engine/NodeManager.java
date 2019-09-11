@@ -26,13 +26,13 @@ import io.reactivex.functions.Predicate;
 public class NodeManager {
 
 //    private final static String[] DEFAULT_NODE_URL_LIST = new String[]{Constants.URL.URL_HTTP_A, Constants.URL.URL_TEST_B};
-    private final static String[] DEFAULT_NODE_URL_LIST = new String[]{"http://192.168.9.190:1000/rpc"};
+    private final static String[] DEFAULT_NODE_URL_LIST = new String[]{"https://aton.test.platon.network/rpc"};
     //线上A网
     private final static String CHAINID_TEST_NET_A = "103";
     //线上B网
     private final static String CHAINID_TEST_NET_B = "104";
     //测试环境
-    private final static String CHAINID_TEST_NET_C = "203";
+    private final static String CHAINID_TEST_NET_C = "103";
     //
 
     private Node curNode;

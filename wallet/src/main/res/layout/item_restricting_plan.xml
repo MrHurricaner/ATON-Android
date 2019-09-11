@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:divider="@drawable/divider_pending_dot"
+    android:orientation="horizontal"
+    android:showDividers="middle">
+
+
+    <EditText
+        android:id="@+id/et_restricting_plan_Epoch"
+        style="@style/Text.000.14"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_weight="1"
+        android:background="@drawable/bg_edittext_underline"
+        android:digits="0123456789"
+        android:inputType="phone"
+        android:gravity="center_vertical|left"
+        android:hint="输入锁仓周期"
+        android:singleLine="true"
+        android:textColorHint="@color/color_b6bbd0" />
+
+    <EditText
+        android:id="@+id/et_restricting_plan_amount"
+        style="@style/Text.000.14"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_weight="1"
+        android:background="@drawable/bg_edittext_underline"
+        android:inputType="numberDecimal"
+        android:digits="0123456789."
+        android:gravity="center_vertical|left"
+        android:hint="输入锁仓金额"
+        android:textColorHint="@color/color_b6bbd0" />
+
+    <ImageView
+        android:id="@+id/iv_remove"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/icon_node_del" />
+
+</LinearLayout>

@@ -67,6 +67,10 @@
         <item name="android:textSize">20sp</item>
     </style>
 
+    <style name="Text.000.36">
+        <item name="android:textSize">36sp</item>
+    </style>
+
     <style name="Text.61646e">
         <item name="android:textColor">@color/color_61646e</item>
     </style>
