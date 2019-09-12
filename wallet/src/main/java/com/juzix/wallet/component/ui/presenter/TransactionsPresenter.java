@@ -253,12 +253,14 @@ public class TransactionsPresenter extends BasePresenter<TransactionsContract.Vi
         List<Transaction> newList = new ArrayList<>();
         if (isLoadMore) {
             newList.addAll(oldList);
+            newList.removeAll(curList);
             newList.addAll(curList);
         } else {
             newList = curList;
         }
         return newList;
     }
+
 
     /**
      * 定时刷新交易记录
@@ -386,7 +388,7 @@ public class TransactionsPresenter extends BasePresenter<TransactionsContract.Vi
     private Single<Response<ApiResponse<List<Transaction>>>> getTransactionList(String walletAddress, String direction, long beginSequence) {
         return ServerUtils
                 .getCommonApi()
-                .getTransactionList( ApiRequestBody.newBuilder()
+                .getTransactionList(ApiRequestBody.newBuilder()
                         .put("walletAddrs", new String[]{walletAddress})
                         .put("beginSequence", beginSequence)
                         .put("listSize", 20)

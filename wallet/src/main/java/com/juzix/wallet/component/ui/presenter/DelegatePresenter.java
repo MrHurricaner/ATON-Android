@@ -149,7 +149,11 @@ public class DelegatePresenter extends BasePresenter<DelegateContract.View> impl
         }
 
 //        List<String> walletAddressList = WalletManager.getInstance().getAddressList();
+<<<<<<< HEAD
         ServerUtils.getCommonApi().getAccountBalance( ApiRequestBody.newBuilder()
+=======
+        ServerUtils.getCommonApi().getAccountBalance(ApiRequestBody.newBuilder()
+>>>>>>> feature-optimize
                 .put("addrs", walletAddressList.toArray(new String[walletAddressList.size()]))
                 .build())
                 .compose(RxUtils.bindToLifecycle(getView()))
@@ -206,7 +210,11 @@ public class DelegatePresenter extends BasePresenter<DelegateContract.View> impl
         if (mWallet == null) {
             return;
         }
+<<<<<<< HEAD
         ServerUtils.getCommonApi().getIsDelegateInfo( ApiRequestBody.newBuilder()
+=======
+        ServerUtils.getCommonApi().getIsDelegateInfo(ApiRequestBody.newBuilder()
+>>>>>>> feature-optimize
                 .put("addr", mWallet.getPrefixAddress())
                 .put("nodeId", mNodeAddress)
                 .build())

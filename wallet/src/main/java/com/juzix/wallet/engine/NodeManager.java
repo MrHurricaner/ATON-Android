@@ -33,7 +33,6 @@ public class NodeManager {
     private final static String CHAINID_TEST_NET_B = "104";
     //测试环境
     private final static String CHAINID_TEST_NET_C = "103";
-    //
 
     private Node curNode;
     private NodeService nodeService;

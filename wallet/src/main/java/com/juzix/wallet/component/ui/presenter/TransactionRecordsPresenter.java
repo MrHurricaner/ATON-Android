@@ -40,7 +40,7 @@ public class TransactionRecordsPresenter extends BasePresenter<TransactionRecord
 
         ServerUtils
                 .getCommonApi()
-                .getTransactionList( ApiRequestBody.newBuilder()
+                .getTransactionList(ApiRequestBody.newBuilder()
                         .put("walletAddrs", addressList)
                         .put("beginSequence", getBeginSequenceByDirection(direction))
                         .put("listSize", 20)

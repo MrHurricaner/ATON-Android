@@ -1,5 +1,6 @@
 package com.juzix.wallet;
 
+
 import com.juzix.wallet.utils.JSONUtil;
 
 import org.web3j.platon.PlatOnFunction;
@@ -30,6 +31,41 @@ public class Test {
         qrCodeData.setPlatOnFunction(new PlatOnFunction(0));
 
         System.out.println(JSONUtil.toJSONString(qrCodeData));
+
+
+//        Flowable
+//                .interval(1, TimeUnit.SECONDS)
+//                .doOnNext(new Consumer<Long>() {
+//                    @Override
+//                    public void accept(Long aLong) throws Exception {
+////                        System.out.println(aLong);
+//                    }
+//                })
+//                .takeUntil(new Predicate<Long>() {
+//                    @Override
+//                    public boolean test(Long aLong) throws Exception {
+//                        return aLong == 5;
+//                    }
+//                })
+//                .filter(new Predicate<Long>() {
+//                    @Override
+//                    public boolean test(Long aLong) throws Exception {
+//                        return aLong == 5;
+//                    }
+//                })
+//                .subscribe(new Consumer<Long>() {
+//                    @Override
+//                    public void accept(Long aLong) throws Exception {
+//                        System.out.println(aLong);
+//                    }
+//                });
+//
+//
+//        try {
+//            Thread.sleep(1000000000000L);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
 
     }
 

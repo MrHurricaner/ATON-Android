@@ -70,7 +70,7 @@ public class ValidatorsDetailPresenter extends BasePresenter<ValidatorsDetailCon
     }
 
     private void getValidatorsDetailData(String nodeId) {
-        ServerUtils.getCommonApi().getNodeCandidateDetail( ApiRequestBody.newBuilder()
+        ServerUtils.getCommonApi().getNodeCandidateDetail(ApiRequestBody.newBuilder()
                 .put("nodeId", nodeId)
                 .build())
                 .compose(bindToLifecycle())
