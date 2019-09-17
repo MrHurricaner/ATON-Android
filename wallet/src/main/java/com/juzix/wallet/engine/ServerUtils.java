@@ -37,7 +37,7 @@ public class ServerUtils {
             if (mBaseApi == null) {
                 synchronized (ServerUtils.class) {
                     if (mBaseApi == null) {
-                        mBaseApi = createService(BaseApi.class, Constants.URL.URL_HTTP_A);
+                        mBaseApi = createService(BaseApi.class, NodeManager.getInstance().getCurNode().getNodeAddress());
                     }
                 }
             }

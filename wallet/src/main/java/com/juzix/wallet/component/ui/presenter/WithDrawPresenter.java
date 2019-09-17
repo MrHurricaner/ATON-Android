@@ -113,11 +113,7 @@ public class WithDrawPresenter extends BasePresenter<WithDrawContract.View> impl
 
     @Override
     public void getBalanceType() {
-<<<<<<< HEAD
-        ServerUtils.getCommonApi().getWithDrawBalance( ApiRequestBody.newBuilder()
-=======
         ServerUtils.getCommonApi().getWithDrawBalance(ApiRequestBody.newBuilder()
->>>>>>> feature-optimize
                 .put("addr", mWalletAddress)
                 .put("nodeId", mNodeAddress)
                 .build())

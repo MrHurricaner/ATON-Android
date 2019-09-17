@@ -31,7 +31,6 @@ import io.reactivex.functions.Consumer;
 public class MainPresenter extends BasePresenter<MainContract.View> implements MainContract.Presenter {
 
     private VersionUpdate mVersionUpdate;
-    private Context mContext;
 
     public MainPresenter(MainContract.View view) {
         super(view);
@@ -96,7 +95,7 @@ public class MainPresenter extends BasePresenter<MainContract.View> implements M
                     @Override
                     public void onDialogViewClick(DialogFragment fragment, View view, Bundle extra) {
                         if (versionInfo.getAndroidVersionInfo().isForce()) {
-                            CommonTipsDialogFragment.createDialogWithTwoButton(ContextCompat.getDrawable(mContext, R.drawable.icon_dialog_tips), "退出应用?", "取消", new OnDialogViewClickListener() {
+                            CommonTipsDialogFragment.createDialogWithTwoButton(ContextCompat.getDrawable(getContext(), R.drawable.icon_dialog_tips), "退出应用?", "取消", new OnDialogViewClickListener() {
                                 @Override
                                 public void onDialogViewClick(DialogFragment fragment, View view, Bundle extra) {
                                     showUpdateVersionDialog(versionInfo);
@@ -108,7 +107,7 @@ public class MainPresenter extends BasePresenter<MainContract.View> implements M
                                         getView().exitApp();
                                     }
                                 }
-                            }).show(((MainActivity) mContext).getSupportFragmentManager(), "showExistDialog");
+                            }).show(((MainActivity) getContext()).getSupportFragmentManager(), "showExistDialog");
                         }
                         if (fragment != null) {
                             fragment.dismiss();

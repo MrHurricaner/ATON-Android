@@ -67,6 +67,7 @@ public class NodeSettingsActivity extends MVPBaseActivity<NodeSettingsPresenter>
     public void showTitleView(boolean isEdit) {
         hideSoftInput();
         ctb.setRightText(string(isEdit ? R.string.save : R.string.edit));
+        ctb.setRightTextVisibility(View.GONE);
         tvAddNode.setVisibility(isEdit ? View.VISIBLE : View.GONE);
         nodeListAdapter.setEditable(isEdit);
     }
@@ -104,7 +105,7 @@ public class NodeSettingsActivity extends MVPBaseActivity<NodeSettingsPresenter>
     private void initView() {
 
 //        ctb.setRightTextVisibility(BuildConfig.DEBUG ? View.VISIBLE : View.GONE);
-        ctb.setRightTextVisibility(View.VISIBLE);
+        ctb.setRightTextVisibility(View.GONE);
 
         int padding = AndroidUtil.dip2px(this, 16);
         nodeListAdapter = new NodeListAdapter(this, null);

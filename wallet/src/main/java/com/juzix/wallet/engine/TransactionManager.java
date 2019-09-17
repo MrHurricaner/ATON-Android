@@ -96,7 +96,7 @@ public class TransactionManager {
             RawTransaction rawTransaction = RawTransaction.createTransaction(Web3jManager.getInstance().getNonce(from), gasPrice, gasLimit, toAddress, amount.toBigInteger(),
                     txType);
 
-            byte[] signedMessage = TransactionEncoder.signMessage(rawTransaction, NumberParserUtils.parseLong(NodeManager.getInstance().getChainId()), credentials);
+            byte[] signedMessage = TransactionEncoder.signMessage(rawTransaction, NumberParserUtils.parseLong(NodeManager.getInstance().getCurNode().getChainId()), credentials);
             String hexValue = Numeric.toHexString(signedMessage);
 
             PlatonSendTransaction transaction = Web3jManager.getInstance().getWeb3j().platonSendRawTransaction(hexValue).send();
@@ -129,7 +129,7 @@ public class TransactionManager {
                         .to(toAddress)
                         .senderWalletName(walletName)
                         .value(transferAmount.toPlainString())
-                        .chainId(NodeManager.getInstance().getChainId())
+                        .chainId(NodeManager.getInstance().getCurNode().getChainId())
                         .txType(String.valueOf(TransactionType.TRANSFER.getTxTypeValue()))
                         .timestamp(System.currentTimeMillis())
                         .txReceiptStatus(TransactionStatus.PENDING.ordinal())

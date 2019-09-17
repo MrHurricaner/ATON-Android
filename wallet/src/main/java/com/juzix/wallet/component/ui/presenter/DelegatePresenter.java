@@ -46,6 +46,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.functions.BiFunction;
 import io.reactivex.functions.Consumer;
 import retrofit2.Response;
+import retrofit2.http.HEAD;
 import rx.Observable;
 import rx.Subscriber;
 import rx.schedulers.Schedulers;
@@ -148,12 +149,7 @@ public class DelegatePresenter extends BasePresenter<DelegateContract.View> impl
             walletAddressList.addAll(WalletManager.getInstance().getAddressList());
         }
 
-//        List<String> walletAddressList = WalletManager.getInstance().getAddressList();
-<<<<<<< HEAD
-        ServerUtils.getCommonApi().getAccountBalance( ApiRequestBody.newBuilder()
-=======
         ServerUtils.getCommonApi().getAccountBalance(ApiRequestBody.newBuilder()
->>>>>>> feature-optimize
                 .put("addrs", walletAddressList.toArray(new String[walletAddressList.size()]))
                 .build())
                 .compose(RxUtils.bindToLifecycle(getView()))
@@ -210,11 +206,7 @@ public class DelegatePresenter extends BasePresenter<DelegateContract.View> impl
         if (mWallet == null) {
             return;
         }
-<<<<<<< HEAD
-        ServerUtils.getCommonApi().getIsDelegateInfo( ApiRequestBody.newBuilder()
-=======
         ServerUtils.getCommonApi().getIsDelegateInfo(ApiRequestBody.newBuilder()
->>>>>>> feature-optimize
                 .put("addr", mWallet.getPrefixAddress())
                 .put("nodeId", mNodeAddress)
                 .build())

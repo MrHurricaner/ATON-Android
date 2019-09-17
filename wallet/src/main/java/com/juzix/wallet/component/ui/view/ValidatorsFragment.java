@@ -127,12 +127,7 @@ public class ValidatorsFragment extends MVPBaseFragment<ValidatorsPresenter> imp
             @Override
             public void onRefresh(@NonNull RefreshLayout refreshLayout) {
                 isLoadMore = false;
-                allList.clear();
-                activeList.clear();
-                candidateList.clear();
-
                 mPresenter.loadValidatorsData(rankType, nodeState, -1);
-
             }
         });
 
@@ -193,12 +188,7 @@ public class ValidatorsFragment extends MVPBaseFragment<ValidatorsPresenter> imp
 
             }
         });
-    }
 
-    @Override
-    public void onResume() {
-        super.onResume();
-        MobclickAgent.onPageStart(Constants.UMPages.VERIFY_NODE);
         RxAdapterView.itemClicks(rlv_list)
                 .compose(RxUtils.getClickTransformer())
                 .compose(RxUtils.bindToLifecycle(this))
@@ -209,8 +199,14 @@ public class ValidatorsFragment extends MVPBaseFragment<ValidatorsPresenter> imp
                         ValidatorsDetailActivity.actionStart(getContext(), verifyNode.getNodeId());
                     }
                 });
-        Log.d("ValidatorsFragment", "=============" + "onresume");
-        refreshLayout.autoRefresh();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        MobclickAgent.onPageStart(Constants.UMPages.VERIFY_NODE);
+        isLoadMore = false;
+        mPresenter.loadValidatorsData(rankType, nodeState, -1);
     }
 
     @Override
