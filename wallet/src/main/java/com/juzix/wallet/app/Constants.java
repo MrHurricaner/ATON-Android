@@ -116,7 +116,7 @@ public class Constants {
         String UPDATE_URL = "http://192.168.9.190:1000/config/aton-update.json";
         String URL_TEST_A = "https://test-amigo.platon.network/test";
         String URL_TEST_B = "https://test-beta.platon.network/test";
-        String URL_HTTP_A = "https://aton.test.platon.network";
+        String URL_HTTP_A = "https://aton.main.platon.network";
         String URL_HTTP_B = "https://aton.platon.network";
         String URL_HTTP_C = "https://aton.test.platon.network";
     }
