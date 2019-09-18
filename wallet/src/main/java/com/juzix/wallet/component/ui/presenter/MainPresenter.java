@@ -1,16 +1,12 @@
 package com.juzix.wallet.component.ui.presenter;
 
 import android.Manifest;
-import android.content.Context;
 import android.os.Bundle;
-import android.os.Process;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.content.ContextCompat;
 import android.view.View;
-
 import com.juzhen.framework.util.AndroidUtil;
 import com.juzix.wallet.R;
-import com.juzix.wallet.app.CustomObserver;
 import com.juzix.wallet.app.LoadingTransformer;
 import com.juzix.wallet.component.ui.base.BasePresenter;
 import com.juzix.wallet.component.ui.contract.MainContract;

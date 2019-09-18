@@ -117,4 +117,5 @@ public class NodeEntity extends RealmObject {
     public void setChainId(String chainId) {
         this.chainId = chainId;
     }
+
 }

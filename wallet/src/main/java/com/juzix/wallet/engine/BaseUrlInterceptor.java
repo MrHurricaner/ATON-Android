@@ -1,7 +1,6 @@
 package com.juzix.wallet.engine;
 
 import android.text.TextUtils;
-import android.util.Log;
 
 import java.io.IOException;
 
