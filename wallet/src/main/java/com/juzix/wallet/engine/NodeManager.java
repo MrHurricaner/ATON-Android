@@ -26,7 +26,7 @@ import io.reactivex.functions.Predicate;
 public class NodeManager {
 
     private final static String[] DEFAULT_NODE_URL_LIST = new String[]{"https://aton.main.platon.network", "https://aton.test.platon.network"};
-    private final static String[] DEFAULT_NODE_CHAINID_LIST = new String[]{"101", "103"};
+    private final static String[] DEFAULT_NODE_CHAINID_LIST = new String[]{"97", "103"};
 
     private Node curNode;
     private NodeService nodeService;
